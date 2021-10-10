@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ini adalah link css yg di copas dari bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <title>MID PROJECT</title>
+
+</head>
+<body>
+<!--navbar adalah header pada website  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Student Management MiniApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+    </nav>
+  
+<div class="container mb-4">
+<h1>Student Management Mini App</h1>
+<hr>
+<!-- Untuk membagi tulisan sebelah kanan dan kiri menggunakan class row,col dan container -->
+        <div class="row">
+          <div class="col-7">
+            <div class="container">
+             <h5>Add Student</h5>
+                 <form action="#" method="post">
+<!-- source code untuk tombol show and hide menggunakan button dan Fungsishow -->
+                    <button onclick="FungsiShow()" type="button" class="btn btn-primary" >
+                        Show form add new student 
+                    </button>
+<!-- input student id dan name menggunakan bootstrap -->
+                    <div id="target">
+                        <form name="datapribadi" method=""action="">
+                            <div class="mb-3">
+                              <label for="inputIDNIM" class="form-label">Student ID(NIM) :</label>
+                              <input type="text" class="form-control" name="inputIDNIM" id="input-IDNIM">
+                            </div>
+                            <div class="mb-3">
+                              <label for="inputFullName" class="form-label">Full Name :</label>
+                              <input type="text" class="form-control" name="inputFullName" id="input-FullName">
+                              <div id="inputFullNameHelp" class="form-text"></div>
+                            </div>
+                          </form>
+<!-- source code pemilihan gender menggunakan bootstrap radio -->
+                          <form action="" method="">
+                            <div class="form-check">
+                              <h5>Gender :</h5>
+                              <p><input type='radio' name='Gender' value='male' />Male</p>
+                              <p><input type='radio' name='Gender' value='female' />Female</p>
+                            </div>
+                         </form>
+<!-- source code select program study menggunakan bootstrap select -->           
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                    <label for="inputFaculty" class="form-label" id="Faculty">Faculty</label>
+                    <option selected>Select Faculty</option>
+                    <option value="S2">Pascasarjana</option>
+                    <option value="FIL">Fakultas Filsafat</option>
+                    <option value="FKIP">Fakultas Keguruan dan Ilmu Pendidikan</option>
+                    <option value="FEB">Fakultas Ekonomi dan Bisnis</option>
+                    <option value="Fakultas Pertanian">Fakultas Pertanian</option>
+                    <option value="FIK">Fakultas Ilmu Komputer</option>
+                    <option value="FKEP">Fakultas Keperawatan</option>
+                    <option value="ASMIK">Akademi Sekretaris Manajemen Indonesia Klabat</option>
+                    </select>
+                </div> 
+                    
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                        <label for="inputProdi" class="form-label" id="Prodi">Program Study</label>
+                        <option selected>Program of Study</option>
+                        <option value="S2">Master Management</option>
+                        <option value="S2">Master Teologi</option>
+                        <option value="FIL">Filsafat</option>
+                        <option value="FKIP">Pendidikan Ekonomi</option>
+                        <option value="FKIP">Pendidikan Agama</option>
+                        <option value="FKIP">Pendidikan Bahasa Inggris</option>
+                        <option value="FKIP">Pendidikan Luar Sekolah</option>
+                        <option value="FEB">Management</option>
+                        <option value="FEB">Accounting</option>
+                        <option value="Fakultas Pertanian">Agroteknologi</option>
+                        <option value="FIK">Sistem Informasi</option>
+                        <option value="FIK">Informatika</option>
+                        <option value="FKEP">Keperawatan</option>
+                        <option value="FKEP">Profesi Ners</option>
+                        <option value="ASMIK">Akademi Sekretaris Manajemen Indonesia Klabat</option>
+                        </select>
+                    </div> 
+<!-- Source code add student menggunakan button -->
+                 <button type="button" onClick='' class="btn btn-primary" value="Add Student" id="Add">Add Student</button>
+                        
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+          <div class="col-4">
+           <div class="form-filter">
+             <div>
+               <h3>Filter Students By</h3>
+               <p >Faculty</p>
+               <select class="form-select" aria-label="Default select faculty">
+                <option selected>Select Faculty</option>
+                <option value="S2">Pascasarjana</option>
+                <option value="FIL">Fakultas Filsafat</option>
+                <option value="FKIP">Fakultas Keguruan dan Ilmu Pendidikan</option>
+                <option value="FEB">Fakultas Ekonomi dan Bisnis</option>
+                <option value="Fakultas Pertanian">Fakultas Pertanian</option>
+                <option value="FIK">Fakultas Ilmu Komputer</option>
+                <option value="FKEP">Fakultas Keperawatan</option>
+                <option value="ASMIK">Akademi Sekretaris Manajemen Indonesia Klabat</option>
+               </select>
+            </div>
+            <br>
+            <button type="button" onClick='' class="btn btn-primary">Show Student</button>
+          </form>
+
+               <form action="filter" method="action">
+                <div class="mb-3">
+                  <br>
+                  <p>Program of Study</p>
+                  <select class="form-select" aria-label="Default select example">
+                    <div class="col-md-6 Filter-student-by"></div>
+                    <label for="inputProdiName" class="form-label">Program Of Study</label>
+                        <option selected>Program of Study</option>
+                        <option value="S2">Master Management</option>
+                        <option value="S2">Master Teologi</option>
+                        <option value="FIL">Filsafat</option>
+                        <option value="FKIP">Pendidikan Ekonomi</option>
+                        <option value="FKIP">Pendidikan Agama</option>
+                        <option value="FKIP">Pendidikan Bahasa Inggris</option>
+                        <option value="FKIP">Pendidikan Luar Sekolah</option>
+                        <option value="FEB">Management</option>
+                        <option value="FEB">Accounting</option>
+                        <option value="Fakultas Pertanian">Agroteknologi</option>
+                        <option value="FIK">Sistem Informasi</option>
+                        <option value="FIK">Informatika</option>
+                        <option value="FKEP">Keperawatan</option>
+                        <option value="FKEP">Profesi Ners</option>
+                        <option value="ASMIK">Akademi Sekretaris Manajemen Indonesia Klabat</option>
+                </select>
+                
+                </div>
+
+                <button type="button" onClick='' class="btn btn-primary">Show Student</button>
+              </form>
+            </div>
+         </div>
+          </div>
+<!-- Tampilan data manual pada table menggunakan bootstrap -->
+            <hr>
+            <h1 class="text-center py-4">Our Students</h1>
+            <input type="text" placeholder="Search student..." class="form-control">
+            <div class="row pt-4 mt-4">
+              <table class="table " id="">
+                <tbody>
+                  <tr>
+                    <td>Student ID(NIM)</td>
+                    <td>Full name</td>
+                    <td>Gender</td>
+                    <td>Faculty</td>
+                    <td>Program of study</td>
+                    <td>Action</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">102033420002</td>
+                    <td>Ferlien Praycilia Ayorbaba</td>
+                    <td>Female</td>
+                    <td>Fakultas Ilmu Komputer</td>
+                    <td>Sistem Informasi</td>
+                    <td><a href="#" class="link-danger"><i class="bi bi-trash"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">102033009801</td>
+                    <td>Elen Tuuk</td>
+                    <td>Female</td>
+                    <td>Fakultas Ilmu Komputer</td>
+                    <td>Informatika</td>
+                    <td><a href="#" class="link-danger"><i class="bi bi-trash"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">1020330098098</td>
+                    <td>Bryan Izaac</td>
+                    <td>Male</td>
+                    <td>Fakultas Ilmu Komputer</td>
+                    <td>Sistem Informasi</td>
+                    <td><a href="#" class="link-danger"><i class="bi bi-trash"></i></a></td>
+                  </tr>
+                </tbody>
+                  
+                  
+    
+              </table>
+            </div>
+          </div>
+<!-- Fungsi untuk menampilkan show form student menggunakan getElementById -->
+        <script>
+            function FungsiShow() {
+              var x = document.getElementById("target");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+            </script>
+<!-- source code footer.Tulisan paling bawah pada sebuah website -->
+<div>
+  <footer class="py-4" style="background-color:lightskyblue">
+    <hr>
+    <p class="text-center text-uppercase">&copy; FerlienPraycilia MidProject 2021</p>
+</footer>
+</div>
+
+<!-- link ke javascript -->
+<script src="student.js"></script>
+
+<!-- link bootstrap javascript yg sudah di bundle  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
